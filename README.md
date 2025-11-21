@@ -1,81 +1,87 @@
-# SECUREVote
+# SECUREVote: Blockchain-Enabled Voting Platform
 
-A simple demonstration e‑voting application (educational) that uses a Node.js backend and a static frontend. It provides basic user registration/login, an admin interface to configure an election, and simple voting functionality.
+**SECUREVote** is a secure, web-based electronic voting system designed to address the transparency and auditability issues of traditional e-voting. It combines standard authentication security with a conceptual blockchain layer to create an immutable, tamper-evident audit log of all votes cast.
 
-**Warning:** This project is a learning/demo implementation and is NOT suitable for real-world secure voting without major security, testing, and cryptographic improvements.
+## 🚀 Key Features
 
-## Project structure
+### 1. Secure Authentication
+* **Role-Based Login:** Distinct dashboards for Administrators and Voters.
+* **2-Factor Authentication (2FA):** Integrated OTP (One-Time Password) verification step for all logins to prevent unauthorized access.
+* **Session Management:** Uses secure tokens to manage user sessions.
 
-- `backend/` - Express server and API (`server.js`).
-- `frontend/` - Static HTML/JS files for admin and voter interfaces.
-- `package.json` - Node project metadata and dependencies.
-- `README.md` - This file.
+### 2. Voting Interface (Client Side)
+* **Real-Time Election Data:** Users see the active election title, description, and candidate profiles.
+* **Voting Period Enforcement:** Voting is strictly locked before the start time and after the end time.
+* **Double-Voting Prevention:** Users are restricted to exactly one vote. Attempting to vote again is blocked at both the UI and Server levels.
+* **Abstain Option:** Users can choose to "Abstain," recording their attendance without selecting a specific candidate.
+* **Immediate Feedback:** Voting buttons are instantly disabled upon successful submission to prevent confusion or duplicate attempts.
 
-## Quick setup (Windows PowerShell)
+### 3. Admin Administration Panel
+* **Election Management:** Set the election title, description, and precise voting time window.
+* **Candidate Management:**
+    * Manage a database of 100+ registered users.
+    * **Pagination & Search:** Efficiently find and select candidates from large user lists via backend-optimized search.
+    * **Profile Management:** Add custom manifestos or profiles for candidates.
+* **Live Analytics:** View real-time turnout statistics and a dynamic leaderboard sorted by vote count.
+* **Data Export:** Download final election results as a **CSV file** for offline records.
+* **System Reset:** Ability to wipe all election data and start fresh.
 
-1. Install Node.js (v16+ recommended) and npm.
-
-2. Install dependencies:
-
-```powershell
-cd "D:\2.COLLEGE\Projects\SECUREVote"
-npm install
-```
-
-3. Start the backend server:
-
-```powershell
-node backend/server.js
-```
-
-The backend listens on `http://localhost:3000` by default.
-
-4. Serve or open the frontend:
-
-- Option A (recommended): serve the `frontend/` folder with a static server (for example `http-server`):
-
-```powershell
-# from project root
-npx http-server frontend -p 3001
-# then open http://localhost:3001/admin.html (or index.html)
-```
-
-- Option B: open the HTML files directly in your browser (some features may require a server due to CORS/Authorization headers).
-
-## Default/demo accounts
-
-The backend creates a demo admin account and many sample users on startup:
-
-- Admin: username `pro`, password `pass`
-- Users: `user1`...`user100` with passwords `pass1`...`pass100`
-
-Use the admin account to sign in at `admin.html` and configure the election (title, description, period, candidates).
-
-## How to use
-
-- Register a normal user at `register.html` or log in using one of the sample users.
-- As admin, set election title, description, voting period, and candidates via `admin.html`.
-- During the active voting period, a logged-in user can vote for one candidate.
-- The admin can view turnout and live results in the admin interface.
-
-## Notes and known limitations
-
-- Authentication uses JWT tokens stored in `localStorage` for the demo.
-- The backend stores data in memory — restarting the server resets all state.
-- This is NOT production-grade: no database, minimal input validation, simplistic security.
-- Comments were removed from several frontend/backend files to satisfy a code-cleaning request; functionality should be unchanged.
-
-## Troubleshooting
-
-- If the frontend cannot reach the API, ensure the backend is running on port `3000` and the frontend is served from a web server (or use `npx http-server`).
-- For CORS issues, confirm the backend has `cors()` enabled (it does by default in `backend/server.js`).
-
-## Next steps you can ask me to do
-
-- Run the server and exercise the endpoints locally (I can provide PowerShell commands).
-- Reintroduce helpful inline comments or documentation in specific files.
-- Add a minimal automated test or a small JSON file to persist data across restarts.
+### 4. Blockchain Audit Log 🔗
+* **Immutable Record:** Every vote cast is hashed and added as a "block" to a linear blockchain ledger.
+* **Tamper-Evident:** Each block contains the hash of the previous block. Any attempt to alter past votes would break the cryptographic chain, alerting the admin.
+* **Privacy-Preserving:** The blockchain log is anonymized. It records *what* choice was made (Candidate Name or Abstain) but does not link it to the voter's username, preserving ballot secrecy.
+* **Transparency:** Admins can view the raw blockchain JSON data to verify the integrity of the vote count.
 
 ---
 
-If you want I can now run the server, or continue removing comments from the remaining files as planned.
+## 🛠️ Technology Stack
+
+* **Frontend:** HTML5, CSS3 (Glassmorphism Design), Vanilla JavaScript.
+* **Backend:** Node.js, Express.js.
+* **Security:** `bcrypt` (Password Hashing), `jsonwebtoken` (Auth), `crypto-js` (SHA256 for Blockchain).
+* **Data Storage:** In-memory data structures (Arrays/Objects) for demonstration purposes.
+
+---
+
+## ⚙️ Installation & Setup
+
+1.  **Prerequisites:** Ensure [Node.js](https://nodejs.org/) is installed on your machine.
+2.  **Install Dependencies:** Open your terminal in the project folder and run:
+    ```bash
+    npm install express cors jsonwebtoken bcrypt crypto-js concurrently live-server
+    ```
+3.  **Start the Application:**
+    ```bash
+    npm start
+    ```
+    * The **Backend** will start on `http://localhost:3000`
+    * The **Frontend** will automatically open at `http://127.0.0.1:8080`
+
+---
+
+## 🔑 Login Credentials (Demo)
+
+The system is pre-loaded with 1 Admin and 100 Users.
+
+**Admin Account:**
+* **Username:** `pro`
+* **Password:** `pass`
+
+**User Accounts:**
+* **Username:** `user1` to `user100`
+* **Password:** `pass1` to `pass100` (e.g., `user5` has password `pass5`)
+
+**OTP Code:**
+* For demonstration purposes, the OTP is hardcoded to: **`123456`**
+
+---
+
+## 🛡️ Security Analysis
+
+### Why Blockchain?
+In a standard database, a malicious admin with database access could simply change a number from "40 votes" to "50 votes" without leaving a trace. In **SECUREVote**, the vote count is derived from the database, but it can be audited against the **Blockchain Log**.
+
+If an attacker tries to change a past vote in the blockchain, the hash of that block changes. This invalidates the next block's `previousHash`, and so on, breaking the entire chain. The system detects this and flags the chain as **Invalid**.
+
+### Future Scope (Decentralization)
+Currently, the blockchain resides on the central server ("Centralized Ledger"). To make this system fully "Trustless," the backend logic would be migrated to a Smart Contract on a public network like Ethereum, distributing the ledger across thousands of nodes so no single entity controls the data.
