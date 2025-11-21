@@ -9,8 +9,8 @@
 * **2-Factor Authentication (2FA):** Integrated OTP (One-Time Password) verification step for all logins to prevent unauthorized access.
 * **Session Management:** Uses secure tokens to manage user sessions.
 
-<img width="974" height="368" alt="image" src="https://github.com/user-attachments/assets/f382a230-9ea9-4e11-af78-66919d9bd0ee" />
 <img width="974" height="382" alt="image" src="https://github.com/user-attachments/assets/2ea7a640-ef73-4531-a58b-554509e62a97" />
+<img width="974" height="368" alt="image" src="https://github.com/user-attachments/assets/f382a230-9ea9-4e11-af78-66919d9bd0ee" />
 
 ### 2. Voting Interface (Client Side)
 * **Real-Time Election Data:** Users see the active election title, description, and candidate profiles.
@@ -19,7 +19,7 @@
 * **Abstain Option:** Users can choose to "Abstain," recording their attendance without selecting a specific candidate.
 * **Immediate Feedback:** Voting buttons are instantly disabled upon successful submission to prevent confusion or duplicate attempts.
 
-<img width="974" height="444" alt="image" src="https://github.com/user-attachments/assets/55620623-8295-4d2f-8794-9a2a44fafaa8" />
+<img width="974" height="373" alt="image" src="https://github.com/user-attachments/assets/23e35472-e987-45a3-8d73-96a96b294836" />
 <img width="486" height="185" alt="image" src="https://github.com/user-attachments/assets/4bab49ee-b2c8-41b1-b929-71e12412f75e" />
 <img width="553" height="430" alt="image" src="https://github.com/user-attachments/assets/3a573bc8-4f85-45ed-a07d-d4bdc3584618" />
 
@@ -35,7 +35,7 @@
 
 <img width="974" height="295" alt="image" src="https://github.com/user-attachments/assets/42a4af83-e50a-48f6-8441-ef68a486713e" />
 <img width="974" height="421" alt="image" src="https://github.com/user-attachments/assets/d4b640c9-ac52-48fe-8223-fafa06f483a8" />
-<img width="974" height="373" alt="image" src="https://github.com/user-attachments/assets/23e35472-e987-45a3-8d73-96a96b294836" />
+<img width="974" height="444" alt="image" src="https://github.com/user-attachments/assets/55620623-8295-4d2f-8794-9a2a44fafaa8" />
 
 ### 4. Blockchain Audit Log 🔗
 * **Immutable Record:** Every vote cast is hashed and added as a "block" to a linear blockchain ledger.
