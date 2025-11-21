@@ -1,0 +1,17 @@
+{
+  "name": "securevote",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node backend/server.js",
+    "client": "live-server frontend"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "crypto-js": "^4.2.0",
+    "express-rate-limit": "^8.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

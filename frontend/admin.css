@@ -1,0 +1,139 @@
+input[type="datetime-local"] {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.admin-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.admin-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-section h2 {
+  color: #34495e;
+  margin-top: 0;
+  text-align: left;
+}
+
+#setPeriod,
+#setTitleBtn,
+#updateCandidates,
+#setDescriptionBtn {
+  background: #3498db;
+}
+
+#setPeriod:hover,
+#setTitleBtn:hover,
+#updateCandidates:hover,
+#setDescriptionBtn:hover {
+  background: #2980b9;
+}
+
+.danger-zone {
+  background-color: #fff5f5;
+  border: 1px solid #e53e3e;
+}
+
+.danger-zone h2 {
+  color: #c53030;
+}
+
+#resetElectionBtn {
+  background-color: #e74c3c;
+}
+
+#resetElectionBtn:hover {
+  background-color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+}
+
+.leaderboard-entry {
+  margin-bottom: 15px;
+}
+
+.leaderboard-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.leaderboard-bar-container {
+  width: 100%;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.leaderboard-bar {
+  height: 100%;
+  background-color: #3498db;
+  border-radius: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+.leaderboard-entry.leading .leaderboard-bar {
+  background-color: #2ecc71;
+}
+
+#exportCsvBtn {
+  background-color: #16a085;
+  margin-top: 15px;
+}
+
+#exportCsvBtn:hover {
+  background-color: #117a65;
+}
+
+#viewChainBtn {
+  background-color: #9b59b6;
+  width: 100%;
+}
+
+#viewChainBtn:hover {
+  background-color: #8e44ad;
+}
+
+#chainValidity {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#chainContainer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 0.85em;
+  word-break: break-all;
+  white-space: pre-wrap;
+}

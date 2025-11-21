@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELECTION COMMISSION</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ELECTION COMMISSION<button id="logoutBtn">Logout</button></h1>
+
+    <div class="admin-layout">
+      
+      <div class="column" id="left-column">
+        <div class="admin-section">
+          <h2>Set Election Title</h2>
+          <input type="text" id="electionTitleInput" placeholder="e.g., Student Council President 2025">
+          <button id="setTitleBtn">Set Title</button>
+          <div id="titleStatus"></div>
+        </div>
+        
+        <div class="admin-section">
+          <h2>Set Election Description</h2>
+          <textarea id="electionDescriptionInput" rows="4" placeholder="Enter a short description for the voters..."></textarea>
+          <button id="setDescriptionBtn">Set Description</button>
+          <div id="descriptionStatus"></div>
+        </div>
+
+        <div class="admin-section">
+          <h2>Set Voting Period</h2>
+          <label>Start Time: <input type="datetime-local" id="startTime"></label><br>
+          <label>End Time: <input type="datetime-local" id="endTime"></label><br>
+          <button id="setPeriod">Set Voting Period</button>
+          <div id="periodStatus"></div>
+        </div>
+
+        <div class="admin-section">
+          <h2>Select Candidates & Set Profiles</h2>
+          <input type="text" id="searchBox" placeholder="🔍 Search all users...">
+          <div id="users">Loading users...</div>
+          <div id="paginationControls"></div>
+          <button id="updateCandidates">Update Candidates</button>
+          <div id="candidatesStatus"></div>
+        </div>
+      </div>
+
+      
+      <div class="column" id="right-column">
+        <div class="admin-section">
+          <h2>Live Turnout</h2>
+          <div id="turnoutStatus">Loading...</div>
+        </div>
+        
+        <div class="admin-section">
+          <h2>Live Election Results</h2>
+          <div id="votes"></div>
+          <button id="exportCsvBtn">Export Results (CSV)</button>
+        </div>
+
+        <div class="admin-section">
+          <h2>Blockchain Audit Log</h2>
+          <button id="viewChainBtn">View/Refresh Chain</button>
+          <div id="chainValidity"></div>
+          <pre id="chainContainer"></pre>
+        </div>
+
+        <div class="admin-section danger-zone">
+          <h2>Danger Zone</h2>
+          <p>This will permanently delete all votes, candidates, and settings.</p>
+          <button id="resetElectionBtn">Reset Entire Election</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

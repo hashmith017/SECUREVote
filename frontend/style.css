@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f7fa;
+  background-image: url('bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+
+h1 {
+  margin-top: 30px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+button {
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1em;
+  width: 100%;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#loginForm {
+  max-width: 450px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+#loginForm button {
+  background: #3498db;
+}
+#loginForm button:hover {
+  background: #2980b9;
+}
+
+#logoutBtn {
+  background: #e74c3c;
+  font-size: 0.4em;
+  padding: 8px 12px;
+  width: auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#logoutBtn:hover {
+  background: #c0392b;
+}
+
+.candidate {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.candidate button {
+  background: #2ecc71;
+  width: auto;
+  flex-shrink: 0;
+}
+.candidate button:hover {
+  background: #27ae60;
+}
+
+.result-bar-container {
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+.result-bar {
+  height: 24px;
+  background-color: #2ecc71;
+  border-radius: 4px;
+}
+
+.candidate-info {
+  flex-grow: 1;
+  padding-right: 15px;
+}
+
+.candidate-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #2c3e50;
+}
+
+.candidate-profile {
+  font-size: 0.9em;
+  color: #555;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
+#paginationControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.pagination-btn {
+  width: auto;
+  padding: 8px 12px;
+  font-size: 0.9em;
+  background-color: #7f8c8d;
+}
+
+.pagination-btn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.pagination-btn:not(:disabled):hover {
+  background-color: #34495e;
+}
+
+.pagination-indicator {
+  font-weight: bold;
+  color: #34495e;
+}
+
+.election-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.election-info h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+.election-info p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+#status {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.result-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.result-label {
+  flex: 0 0 150px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.result-percentage {
+  flex: 0 0 50px;
+  font-weight: bold;
+  color: #555;
+  text-align: right;
+}
+
+.abstain-container {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+#abstainBtn {
+  background-color: #7f8c8d;
+  display: none;
+}
+
+#abstainBtn:hover {
+  background-color: #5d6d7e;
+}
+
+#abstainBtn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+#logo {
+  height: 40px; 
+  width: auto;
+  margin-right: 5px;
+  vertical-align: left; 
+}
+
+#otpForm {
+  max-width: 450px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+#otpForm h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  text-align: center;
+}
+
+#otpForm p {
+  color: #555;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#otpForm label {
+  display: block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+#otpForm button {
+  background: #3498db;
+  margin-top: 15px;
+}
+
+#otpForm button:hover {
+  background: #2980b9;
+}
+
+#otpStatus {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #e74c3c;
+}

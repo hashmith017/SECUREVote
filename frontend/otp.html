@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>SECUREVote OTP</h1>
+        <form id="otpForm">
+            <h2>Enter Your One-Time Password</h2>
+            <p>Please enter the 6-digit code. For this demo, the code is <strong>123456</strong>.</p>
+            
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" required autocomplete="one-time-code" maxlength="6">
+            
+            <button type="submit" id="verifyOtpBtn">Verify and Log In</button>
+            <div id="otpStatus"></div>
+        </form>
+    </div>
+    <script src="otp.js"></script>
+</body>
+</html>
