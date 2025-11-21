@@ -32,8 +32,8 @@
 * **Data Export:** Download final election results as a **CSV file** for offline records.
 * **System Reset:** Ability to wipe all election data and start fresh.
 
-<img width="974" height="295" alt="image" src="https://github.com/user-attachments/assets/42a4af83-e50a-48f6-8441-ef68a486713e" />
 <img width="974" height="421" alt="image" src="https://github.com/user-attachments/assets/d4b640c9-ac52-48fe-8223-fafa06f483a8" />
+<img width="974" height="295" alt="image" src="https://github.com/user-attachments/assets/42a4af83-e50a-48f6-8441-ef68a486713e" />
 <img width="974" height="444" alt="image" src="https://github.com/user-attachments/assets/55620623-8295-4d2f-8794-9a2a44fafaa8" />
 
 ### 4. Blockchain Audit Log 🔗
