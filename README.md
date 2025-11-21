@@ -21,7 +21,6 @@
 
 <img width="974" height="373" alt="image" src="https://github.com/user-attachments/assets/23e35472-e987-45a3-8d73-96a96b294836" />
 <img width="486" height="185" alt="image" src="https://github.com/user-attachments/assets/4bab49ee-b2c8-41b1-b929-71e12412f75e" />
-<img width="553" height="430" alt="image" src="https://github.com/user-attachments/assets/3a573bc8-4f85-45ed-a07d-d4bdc3584618" />
 
 ### 3. Admin Administration Panel
 * **Election Management:** Set the election title, description, and precise voting time window.
@@ -44,7 +43,7 @@
 * **Transparency:** Admins can view the raw blockchain JSON data to verify the integrity of the vote count.
 
 <img width="555" height="505" alt="image" src="https://github.com/user-attachments/assets/6b9330d7-0742-4c32-a664-ca3c90e0e269" />
-<img width="974" height="320" alt="image" src="https://github.com/user-attachments/assets/e92ddef5-d703-45bd-9425-5251c67e1b6b" />
+<img width="553" height="430" alt="image" src="https://github.com/user-attachments/assets/3a573bc8-4f85-45ed-a07d-d4bdc3584618" />
 <img width="974" height="320" alt="image" src="https://github.com/user-attachments/assets/ac584afd-82e5-4236-a4ee-554e5d6c4bff" />
 
 ---
